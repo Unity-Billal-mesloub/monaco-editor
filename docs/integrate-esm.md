@@ -61,7 +61,7 @@ module.exports = {
 
 ### Option 2: Using plain webpack
 
-Full working samples are available at https://github.com/microsoft/monaco-editor/tree/main/samples/browser-esm-webpack or https://github.com/microsoft/monaco-editor/tree/main/samples/browser-esm-webpack-small
+Full working samples are available at https://github.com/microsoft/monaco-editor/tree/main/samples/browser-esm-webpack or https://github.com/Unity-Billal-mesloub/monaco-editor/tree/main/samples/browser-esm-webpack-small
 
 - `index.js`
 
@@ -134,7 +134,7 @@ module.exports = {
 
 ### Using parcel
 
-A full working sample is available at https://github.com/microsoft/monaco-editor/tree/main/samples/browser-esm-parcel
+A full working sample is available at https://github.com/Unity-Billal-mesloub/monaco-editor/tree/main/samples/browser-esm-parcel
 
 When using parcel, we need to use the `getWorkerUrl` function and build the workers seperately from our main source. To simplify things, we can write a tiny bash script to build the workers for us.
 
@@ -188,7 +188,7 @@ _note - the `getWorkerUrl` paths are relative to the build directory of your src
 
 ### Using Vite
 
-Adding monaco editor to [Vite](https://vitejs.dev/) is simple since it has built-in support for web workers. You only need to implement the `getWorker` function (NOT the `getWorkerUrl`) to use Vite's output ([Source](https://github.com/vitejs/vite/discussions/1791#discussioncomment-321046)):
+Adding monaco editor to [Vite](https://vitejs.dev/) is simple since it has built-in support for web workers. You only need to implement the `getWorker` function (NOT the `getWorkerUrl`) to use Vite's output ([Source](https://github.com/Unity-Billal-mesloub/vite/discussions/discussioncomment)):
 
 ```js
 import * as monaco from 'monaco-editor';
