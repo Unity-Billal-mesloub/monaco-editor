@@ -1,5 +1,5 @@
 import { action, observable } from "mobx";
-import { IPlaygroundProject } from "../../../shared";
+import { groundProject } from "../../../shared";
 import { monacoEditorVersion } from "../../monacoEditorVersion";
 import { LzmaCompressor } from "../../utils/lzmaCompressor";
 import {
@@ -8,18 +8,18 @@ import {
 	ILocation,
 } from "../../utils/ObservableHistory";
 import { debouncedComputed, Disposable } from "../../utils/utils";
-import { getPlaygroundExamples, PlaygroundExample } from "./playgroundExamples";
+import { getgroundExamples, groundExample } from "./groundExamples";
 import { Source } from "./Source";
-import { PlaygroundModel } from "./PlaygroundModel";
+import { groundModel } from "./groundModel";
 import { projectEquals } from "./utils";
 
 export class LocationModel implements IHistoryModel {
 	public readonly dispose = Disposable.fn();
 
-	private readonly compressor = new LzmaCompressor<IPlaygroundProject>();
+	private readonly compressor = new LzmaCompressor<IgroundProject>();
 
 	private cachedState:
-		| { state: IPlaygroundProject; hash: string }
+		| { state: IgroundProject; hash: string }
 		| undefined = undefined;
 
 	@observable private _sourceOverride: Source | undefined;
@@ -39,7 +39,7 @@ export class LocationModel implements IHistoryModel {
 	@observable historyId: number = 0;
 
 	constructor(
-		private readonly model: PlaygroundModel,
+		private readonly model: groundModel,
 		createHistoryController = true
 	) {
 		if (createHistoryController) {
@@ -98,18 +98,18 @@ export class LocationModel implements IHistoryModel {
 		let example: PlaygroundExample | undefined;
 
 		if (!hashValue) {
-			this.model.selectedExample = getPlaygroundExamples()[0].examples[0];
+			this.model.selectedExample = getgroundExamples()[0].examples[0];
 		} else if ((example = findExample(hashValue))) {
 			this.model.selectedExample = example;
 		} else {
-			let p: IPlaygroundProject | undefined = undefined;
+			let p: groundProject | undefined = undefined;
 			if (this.cachedState?.hash === hashValue) {
 				p = this.cachedState.state;
 			}
 			if (!p) {
 				try {
 					p =
-						this.compressor.decodeData<IPlaygroundProject>(
+						this.compressor.decodeData<groundProject>(
 							hashValue
 						);
 				} catch (e) {
@@ -126,7 +126,7 @@ export class LocationModel implements IHistoryModel {
 	private readonly computedHashValue = debouncedComputed(
 		500,
 		() => ({
-			state: this.model.playgroundProject,
+			state: this.model.groundProject,
 			selectedExampleProject: this.model.selectedExampleProject,
 		}),
 		({ state, selectedExampleProject }) => {
