@@ -1,4 +1,4 @@
-import { IPlaygroundProject } from "../../../shared";
+import { groundProject } from "../../../shared";
 
 export function findLastIndex<T>(
 	array: T[],
@@ -12,8 +12,8 @@ export function findLastIndex<T>(
 	return -1;
 }
 export function projectEquals(
-	project1: IPlaygroundProject,
-	project2: IPlaygroundProject
+	project1: groundProject,
+	project2: groundProject
 ): boolean {
 	return (
 		normalizeLineEnding(project1.css) ===
