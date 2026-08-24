@@ -1,7 +1,3 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
 
 import { action, computed, observable, toJS } from "mobx";
 import {
@@ -186,7 +182,6 @@ export function getDefaultSettings(): Settings {
 
 		coreSource: "latest",
 		latestCoreStability: "dev",
-		coreUrl: "http://localhost:5001/out/vs",
 
 		languagesSource: "latest",
 		latestLanguagesStability: "dev",
