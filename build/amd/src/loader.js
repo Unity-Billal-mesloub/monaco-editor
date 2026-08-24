@@ -1,10 +1,5 @@
 'use strict';
-/*!-----------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.42.0-dev-20230906(e7d7a5b072e74702a912a4c855a3bda21a7757e7)
- * Released under the MIT license
- * https://github.com/microsoft/vscode/blob/main/LICENSE.txt
- *-----------------------------------------------------------*/ const _amdLoaderGlobal = this,
+ const _amdLoaderGlobal = this,
 	_commonjsGlobal = typeof global == 'object' ? global : {};
 var AMDLoader;
 (function (u) {
