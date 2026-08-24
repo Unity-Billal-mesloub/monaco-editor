@@ -14,11 +14,11 @@ import { withLoadedMonaco } from "../../components/monaco/MonacoLoader";
 import { monacoEditorVersion } from "../../monacoEditorVersion";
 import { hotComponent } from "../../utils/hotComponent";
 import { IReference, ref } from "../../utils/ref";
-import { PlaygroundModel } from "./PlaygroundModel";
+import { groundModel } from "./groundModel";
 import { Preview } from "./Preview";
 import { SettingsDialog } from "./SettingsDialog";
 import { getNpmVersionsSync } from "./getNpmVersionsSync";
-import { PlaygroundExample, getPlaygroundExamples } from "./playgroundExamples";
+import { groundExample, getgroundExamples } from "./groundExamples";
 
 @hotComponent(module)
 @observer
@@ -64,8 +64,8 @@ export class PlaygroundPageContent extends React.Component<
 													>
 														Example:
 													</span>
-													<Select<PlaygroundExample>
-														values={getPlaygroundExamples().map(
+													<Select<groundExample>
+														values={getgroundExamples().map(
 															(e) => ({
 																groupTitle:
 																	e.chapterTitle,
