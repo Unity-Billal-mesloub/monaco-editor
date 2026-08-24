@@ -22,7 +22,6 @@ function getCompilerHook(
 			filename,
 			chunkFilename,
 			publicPath: compilation.outputOptions.publicPath,
-			// HACK: globalObject is necessary to fix https://github.com/webpack/webpack/issues/6642
 			globalObject: 'this'
 		};
 		const childCompiler = compilation.createChildCompiler(id, outputOptions, [
