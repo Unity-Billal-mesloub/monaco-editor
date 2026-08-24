@@ -9,13 +9,13 @@ import { ControlledMonacoEditor } from "../../components/monaco/MonacoEditor";
 import { ref } from "../../utils/ref";
 import { ObservablePromise } from "../../utils/ObservablePromise";
 import { getNpmVersionsSync } from "./getNpmVersionsSync";
-import { PlaygroundModel, SettingsDialogModel } from "./PlaygroundModel";
-import { Horizontal, Vertical } from "./PlaygroundPageContent";
+import { groundModel, SettingsDialogModel } from "./groundModel";
+import { Horizontal, Vertical } from "./groundPageContent";
 import { StabilityValues } from "./SettingsModel";
 
 @observer
 export class SettingsDialog extends React.Component<{
-	model: PlaygroundModel;
+	model: groundModel;
 }> {
 	private lastSettingsDialogModel: SettingsDialogModel | undefined;
 
