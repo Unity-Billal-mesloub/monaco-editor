@@ -32,15 +32,15 @@
     "preserve",
     "imports"
   ],
-  "homepage": "https://github.com/SLTKA/rollup-plugin-keep-css-imports",
+  "homepage": "https://github.com/Unity-Billal-mesloub/rollup-plugin-keep-css-imports",
   "author": "Alexandr Yeskov",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SLTKA/rollup-plugin-keep-css-imports"
+    "url": "https://github.com/Unity-Billal-mesloub/rollup-plugin-keep-css-imports"
   },
   "bugs": {
-    "url": "https://github.com/SLTKA/rollup-plugin-keep-css-imports/issues"
+    "url": "https://github.com/Unity-Billal-mesloub/rollup-plugin-keep-css-imports/issues"
   },
   "scripts": {
     "prebuild": "rimraf -rf dist/",
