@@ -1,39 +1,39 @@
-import { IPlaygroundProject } from "../../../shared";
+import { groundProject } from "../../../shared";
 
 const descriptions = require.context<{ title: string; sortingKey?: number }>(
-	"../../data/playground-samples",
+	"../../data/ground-samples",
 	true,
 	/json$/
 );
 
 const files = require.context<{ default: string }>(
-	"!!raw-loader!../../data/playground-samples/",
+	"!!raw-loader!../../data/ground-samples/",
 	true,
 	/(html|css|js)$/,
 	"lazy"
 );
 
-export interface PlaygroundExampleChapter {
+export interface groundExampleChapter {
 	chapterTitle: string;
-	examples: PlaygroundExample[];
+	examples: groundExample[];
 	sortingKey: number;
 }
 
-export interface PlaygroundExample {
+export interface groundExample {
 	id: string;
 	title: string;
-	load(): Promise<IPlaygroundProject>;
+	load(): Promise<groundProject>;
 	sortingKey: number;
 }
 
-let _cache: PlaygroundExampleChapter[] | undefined = undefined;
+let _cache: groundExampleChapter[] | undefined = undefined;
 
-export function getPlaygroundExamples(): PlaygroundExampleChapter[] {
+export function getgroundExamples(): groundExampleChapter[] {
 	if (_cache !== undefined) {
 		return _cache;
 	}
 
-	const result: PlaygroundExampleChapter[] = [];
+	const result: groundExampleChapter[] = [];
 	const chapterFileName = "chapter.json";
 	for (const chapterKey of descriptions
 		.keys()
@@ -48,7 +48,7 @@ export function getPlaygroundExamples(): PlaygroundExampleChapter[] {
 		const examples = descriptions
 			.keys()
 			.filter((k) => k.startsWith(path) && k.endsWith(sampleJsonFileName))
-			.map<PlaygroundExample>((key) => {
+			.map<groundExample>((key) => {
 				const path = key.substring(
 					0,
 					key.length - sampleJsonFileName.length
