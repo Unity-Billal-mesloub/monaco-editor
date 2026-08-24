@@ -35,7 +35,7 @@ try {
 
 @observer
 export class Preview extends React.Component<{
-	model: PlaygroundModel;
+	model: groundModel;
 	getPreviewState: () => IPreviewState | undefined;
 }> {
 	private disposables: monaco.IDisposable[] = [];
