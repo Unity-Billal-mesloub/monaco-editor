@@ -1,7 +1,3 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
 
 import {
 	action,
@@ -20,7 +16,7 @@ import { IPlaygroundProject, IPreviewState } from "../../../shared";
 import { Debouncer } from "../../utils/Debouncer";
 import { ObservablePromise } from "../../utils/ObservablePromise";
 import { Disposable } from "../../utils/utils";
-import { PlaygroundExample } from "./playgroundExamples";
+import { PlaygroundExample } from "./groundExamples";
 import {
 	getDefaultSettings,
 	JsonString,
@@ -100,8 +96,8 @@ export class PlaygroundModel {
 	}
 
 	@computed
-	public get playgroundProject(): IPlaygroundProject {
-		const project: IPlaygroundProject = {
+	public get groundProject(): groundProject {
+		const project: groundProject = {
 			html: this.html,
 			js: this.js,
 			css: this.css,
@@ -113,7 +109,7 @@ export class PlaygroundModel {
 	@computed
 	public get state(): IPreviewState {
 		return {
-			...this.playgroundProject,
+			...this.groundProject,
 			monacoSetup: this.monacoSetup,
 			reloadKey: this.reloadKey,
 		};
@@ -146,18 +142,18 @@ export class PlaygroundModel {
 	public settingsDialogModel: SettingsDialogModel | undefined = undefined;
 
 	@observable.ref
-	private _selectedExample: PlaygroundExample | undefined;
+	private _selectedExample: groundExample | undefined;
 
 	@observable.ref
 	public selectedExampleProject:
-		| { example: PlaygroundExample; project: IPlaygroundProject }
+		| { example: PlaygroundExample; project: groundProject }
 		| undefined;
 
-	public get selectedExample(): PlaygroundExample | undefined {
+	public get selectedExample(): groundExample | undefined {
 		return this._selectedExample;
 	}
 
-	public set selectedExample(value: PlaygroundExample | undefined) {
+	public set selectedExample(value: groundExample | undefined) {
 		this._selectedExample = value;
 		this.selectedExampleProject = undefined;
 		if (value) {
@@ -184,7 +180,7 @@ export class PlaygroundModel {
 
 		this.webEditorClient?.onDidConnect.then(() => {
 			autorun(() => {
-				const state = this.playgroundProject;
+				const state = this.groundProject;
 				this.webEditorClient!.updateContent({
 					js: state.js,
 					html: state.html,
@@ -323,7 +319,7 @@ export class PlaygroundModel {
 	}
 
 	@action
-	public setState(state: IPlaygroundProject) {
+	public setState(state: groundProject) {
 		this.html = state.html;
 		this.js = state.js;
 		this.css = state.css;
