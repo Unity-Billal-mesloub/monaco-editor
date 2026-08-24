@@ -1,7 +1,3 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
 
 import path = require('path');
 import fs = require('fs');
@@ -95,7 +91,6 @@ function importLibs() {
 	}
 
 	let strLibResult = `/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 ${generatedNote}
@@ -103,8 +98,7 @@ ${generatedNote}
 /** Contains all the lib files */
 export const libFileMap: Record<string, string> = {}
 `;
-	let strIndexResult = `/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
+	let strIndexResult = `/*---------------------------------------------------------------------------------------------.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 ${generatedNote}
