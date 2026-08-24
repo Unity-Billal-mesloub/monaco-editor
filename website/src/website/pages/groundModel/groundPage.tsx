@@ -1,8 +1,8 @@
 import { observer } from "mobx-react";
 import * as React from "react";
 import { hotComponent } from "../../utils/hotComponent";
-import { PlaygroundModel } from "./PlaygroundModel";
-import { PlaygroundPageContent } from "./PlaygroundPageContent";
+import { groundModel } from "./groundModel";
+import { groundPageContent } from "./groundPageContent";
 import { withLoader } from "../../components/Loader";
 import { getNpmVersions } from "./getNpmVersionsSync";
 
@@ -18,14 +18,14 @@ import { getNpmVersions } from "./getNpmVersionsSync";
 })
 @hotComponent(module)
 @observer
-export class PlaygroundPage extends React.Component {
-	private readonly model = new PlaygroundModel();
+export class groundPage extends React.Component {
+	private readonly model = new groundModel();
 
 	componentWillUnmount() {
 		this.model.dispose();
 	}
 
 	render() {
-		return <PlaygroundPageContent model={this.model} />;
+		return <groundPageContent model={this.model} />;
 	}
 }
