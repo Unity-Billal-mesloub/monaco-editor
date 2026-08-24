@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PlaygroundModel } from "./PlaygroundModel";
+import { groundModel } from "./groundModel";
 import { observer } from "mobx-react";
 import { observable, reaction } from "mobx";
 import {
@@ -21,11 +21,11 @@ try {
 	document.head.appendChild(scriptRuntime);
 
 	const script = document.createElement('script');
-	script.src = './playgroundRunner.js';
+	script.src = './groundRunner.js';
 	document.head.appendChild(script);
 
 	const link = document.createElement('link');
-	link.href = './playgroundRunner.css';
+	link.href = './groundRunner.css';
 	link.rel = 'stylesheet';
 	document.head.appendChild(link);
 } catch (e) {
@@ -78,7 +78,6 @@ export class Preview extends React.Component<{
 					// sandbox="allow-scripts allow-modals"
 					frameBorder={0}
 					ref={this.handleIframe}
-					src={`https://isolated-playground.github.io/?jsSrcBase64=${btoa(
 						jsSrc
 					)}`}
 				/>
