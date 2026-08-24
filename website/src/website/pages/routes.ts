@@ -1,7 +1,3 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
 
 export class Route {
 	constructor(public readonly href: string) {}
@@ -23,6 +19,6 @@ function trimEnd(str: string, end: string): string {
 }
 
 export const home = new Route("./");
-export const playground = new Route("./playground.html");
+export const playground = new Route("./ground.html");
 export const docs = new Route("./docs.html");
 export const monarch = new Route("./monarch.html");
