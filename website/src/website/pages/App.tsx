@@ -1,5 +1,5 @@
 import { Home } from "./home/Home";
-import { PlaygroundPage } from "./ground/groundPage";
+import { groundPage } from "./ground/groundPage";
 import { docs, home, monarch, ground } from "./routes";
 import * as React from "react";
 import { DocsPage } from "./DocsPage";
