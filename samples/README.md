@@ -5,7 +5,7 @@ Standalone HTML samples showing how to integrate the Monaco Editor.
 ## Running
 
 ```bash
-git clone https://github.com/microsoft/monaco-editor.git
+git clone https://github.com/Unity-Billal-mesloub/monaco-editor.git
 cd monaco-editor
 cd samples
 npm install .
@@ -31,6 +31,3 @@ Go to <a href="http://localhost:8888">localhost:8888</a> and explore the samples
 - `browser-amd-monarch`: running with a custom language grammar written with Monarch.
 - `browser-amd-shared-model`: using the same text model in two editors.
 
-## License
-
-MIT
