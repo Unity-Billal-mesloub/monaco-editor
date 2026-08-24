@@ -45,10 +45,10 @@ export class SettingsDialog extends React.Component<{
 				onHide={() => model.closeSettingsDialog(false)}
 				size="xl"
 			>
-				<Modal.Header closeButton>
-					<Modal.Title>Settings</Modal.Title>
-				</Modal.Header>
-				<Modal.Body>
+				<Model.Header closeButton>
+					<Model.Title>Settings</Model.Title>
+				</Model.Header>
+				<Model.Body>
 					<ListGroup>
 						<ListGroup.Item>
 							<div className="d-flex">
