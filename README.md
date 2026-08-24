@@ -2,10 +2,10 @@
 
 [![Versions](https://img.shields.io/npm/v/monaco-editor)](https://www.npmjs.com/package/monaco-editor)
 [![Versions](https://img.shields.io/npm/v/monaco-editor/next)](https://www.npmjs.com/package/monaco-editor)
-[![Feature Requests](https://img.shields.io/github/issues/microsoft/monaco-editor/feature-request.svg)](https://github.com/microsoft/monaco-editor/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
+[![Feature Requests](https://img.shields.io/github/issues/microsoft/monaco-editor/feature-request.svg)](https://github.com/Unity-Billal-mesloub/monaco-editor/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
 [![Bugs](https://img.shields.io/github/issues/microsoft/monaco-editor/bug.svg)](https://github.com/microsoft/monaco-editor/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug)
 
-The Monaco Editor is the fully featured code editor from [VS Code](https://github.com/microsoft/vscode). Check out the [VS Code docs](https://code.visualstudio.com/docs/editor/editingevolved) to see some of the supported features.
+The Monaco Editor is the fully featured code editor from [VS Code](https://github.com/Unity-Billal-mesloub/vscode). Check out the [VS Code docs](https://code.visualstudio.com/docs/editor/editingevolved) to see some of the supported features.
 
 ![image](https://user-images.githubusercontent.com/5047891/94183711-290c0780-fea3-11ea-90e3-c88ff9d21bd6.png)
 
@@ -65,8 +65,8 @@ Many Monaco related objects often implement the `.dispose()` method. This method
 
 ## Documentation
 
-- Learn how to integrate the editor with these [complete samples](./samples/).
-  - [Integrate the ESM version](./docs/integrate-esm.md)
+- Learn how to integrate the editor with these [complete samples](https://github.com/Unity-Billal-mesloub/monaco-editor/tree/main/samples/legacy).
+  - [Integrate the ESM version](https://github.com/Unity-Billal-mesloub/monaco-editor/blob/main/docs/integrate-esm.md)
 - Learn how to use the editor API and try out your own customizations in the [playground](https://microsoft.github.io/monaco-editor/playground.html).
 - Explore the [API docs](https://microsoft.github.io/monaco-editor/docs.html) or read them straight from [`monaco.d.ts`](https://github.com/Unity-Billal-mesloub/monaco-editor/blob/gh-pages/node_modules/monaco-editor/monaco.d.ts).
 - Read [this guide](https://github.com/Unity-Billal-mesloub/monaco-editor/wiki/Accessibility-Guide-for-Integrators) to ensure the editor is accessible to all your users!
