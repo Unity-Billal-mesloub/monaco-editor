@@ -109,7 +109,7 @@ export class BisectModel {
 			versions[indexOfLastBadVersion]
 		);
 		window.open(
-			`https://github.com/microsoft/vscode/compare/${goodCommitId}...${badCommitId}`,
+			`https://github.com/Unity-Billal-mesloub/vscode/compare/${goodCommitId}...${badCommitId}`,
 			"_blank"
 		);
 	}
